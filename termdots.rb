@@ -68,7 +68,7 @@ class ColorGenerator
         :white     => [255, 255, 255]
     }
 
-    # color => ansi escape code
+    # color => ANSI escape code
     CT_ANSI = {
         :black     => "\033[40m",
         :red       => "\033[41m",
@@ -122,7 +122,7 @@ class ColorGenerator
             return ""
         end
 
-        diff_min = 255 * 255 * 255
+        diff_min = 255 * 3
         ret = CT_ANSI[:black]
         CT_RGB.each do |color, rgb|
             diff = (r - rgb[0]).abs + (g - rgb[1]).abs + (b - rgb[2]).abs
